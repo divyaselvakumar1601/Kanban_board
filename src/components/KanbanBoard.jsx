@@ -46,7 +46,7 @@ const KanbanBoard = ({ darkMode }) => {
           <option>Medium</option>
           <option>High</option>
         </select>
-        <select className={`border px-2 py-1 rounded`} value={status} onChange={(e) => setStatus(e.target.value)}>
+        <select className={`border px-2 py-1 rounded ${darkMode ? 'text-white bg-gray-700' : 'text-black bg-white'}`} value={status} onChange={(e) => setStatus(e.target.value)}>
           {columns.map(col => (
             <option key={col.id} value={col.id}>{col.title}</option>
           ))}
